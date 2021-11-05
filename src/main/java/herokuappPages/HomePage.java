@@ -5,14 +5,19 @@ import static herokuappPages.HerokuPageBase.driver;
 
 public class HomePage {
     private String pageUrl = "https://the-internet.herokuapp.com/";
-    private By fileUploadPage = By.linkText("File Upload");
+    private By fileUploadPageLink = By.linkText("File Upload");
+    private By dynamicLoadingPageLink = By.linkText("Dynamic Loading");
 
     public HomePage() {
         driver.get(pageUrl);
     }
 
     public void navigateToFileUploadPage(){
-        driver.findElement(fileUploadPage).click();
+        driver.findElement(fileUploadPageLink).click();
+    }
+
+    public void navigateToDynamicLoadingPage(){
+        driver.findElement(dynamicLoadingPageLink).click();
     }
 
 }
