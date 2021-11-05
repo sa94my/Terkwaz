@@ -7,7 +7,7 @@
 
 #my ignores
 target/
-resources/
+**/resources/
 
 # AWS User-specific
 .idea/**/aws.xml
