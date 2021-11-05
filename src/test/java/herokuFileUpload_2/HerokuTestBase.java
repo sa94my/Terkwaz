@@ -1,7 +1,6 @@
-package heroku_2;
+package herokuFileUpload_2;
 
-import google.PageBase;
-import herokuapp.HerokuPageBase;
+import herokuappPages.HerokuPageBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,6 +20,7 @@ public class HerokuTestBase {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         HerokuPageBase HerokuPageBaseObject = new HerokuPageBase(driver);
+
     }
 
     @AfterMethod

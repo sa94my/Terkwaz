@@ -4,7 +4,7 @@
     <test thread-count="5" name="heroku">
         <classes>
             <class name="google_1.TestGoogleSearch" />
-            <class name="heroku_2.TestFileUpload" />
+            <class name="herokuFileUpload_2.TestFileUpload" />
         </classes>
     </test>
 

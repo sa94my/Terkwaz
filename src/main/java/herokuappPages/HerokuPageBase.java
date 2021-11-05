@@ -1,4 +1,4 @@
-package herokuapp;
+package herokuappPages;
 
 import org.openqa.selenium.WebDriver;
 

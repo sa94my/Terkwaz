@@ -1,4 +1,4 @@
-package herokuapp;
+package herokuappPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static herokuapp.HerokuPageBase.driver;
+import static herokuappPages.HerokuPageBase.driver;
 
 public class FileUploadPage {
 
@@ -18,12 +18,7 @@ public class FileUploadPage {
 
     WebDriverWait wait;
 
-    /*
-    navigate directly to the test page rather than home page > test page
-     */
-    public FileUploadPage(){
-        driver.get(pageUrl);
-    }
+
 
     public void FileUpload(String pathToFile){
         driver.findElement(uploadBtnLocator).sendKeys(pathToFile);
