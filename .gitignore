@@ -5,6 +5,10 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
+#my ignores
+target/
+resources/
+
 # AWS User-specific
 .idea/**/aws.xml
 

@@ -1,4 +1,4 @@
-package GUI;
+package google_1;
 
 import google.SearchPage;
 import org.testng.Assert;
@@ -13,11 +13,6 @@ public class TestGoogleSearch extends TestBase{
     public void testSearchWithKeyword(){
         SearchPage searchPageObject = new SearchPage();
         searchPageObject.searchWithString(searchKeyword);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         Assert.assertEquals(searchPageObject.getNthResultText(indexOfSearchResult),expectedText);
     }
 }

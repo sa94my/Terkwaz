@@ -3,8 +3,8 @@
 <suite name="Suite">
     <test thread-count="5" name="heroku">
         <classes>
-            <class name="GUI.TestGoogleSearch" />
-s
+            <class name="google_1.TestGoogleSearch" />
+            <class name="heroku_2.TestFileUpload" />
         </classes>
     </test>
 
