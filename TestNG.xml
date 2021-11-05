@@ -3,9 +3,9 @@
 <suite name="Suite">
     <test thread-count="5" name="heroku">
         <classes>
-            <class name="google_1.TestGoogleSearch" />
-            <class name="herokuFileUpload_2.TestFileUpload" />
-            <class name="herokuFileUpload_2.TestDynamicLoading"></class>
+            <class name="google_tests.TestGoogleSearch" />
+            <class name="herokuApp_tests.TestFileUpload" />
+            <class name="herokuApp_tests.TestDynamicLoading"></class>
         </classes>
     </test>
 

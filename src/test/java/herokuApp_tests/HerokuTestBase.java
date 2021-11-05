@@ -1,4 +1,4 @@
-package herokuFileUpload_2;
+package herokuApp_tests;
 
 import herokuappPages.HerokuPageBase;
 import io.github.bonigarcia.wdm.WebDriverManager;

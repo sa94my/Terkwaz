@@ -1,4 +1,4 @@
-package google_1;
+package google_tests;
 
 import google.PageBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
