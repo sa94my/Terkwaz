@@ -5,6 +5,7 @@
         <classes>
             <class name="google_1.TestGoogleSearch" />
             <class name="herokuFileUpload_2.TestFileUpload" />
+            <class name="herokuFileUpload_2.TestDynamicLoading"></class>
         </classes>
     </test>
 
