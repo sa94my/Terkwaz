@@ -19,6 +19,7 @@ import java.io.IOException;
 
 public class HerokuTestBase {
     private WebDriver driver ;
+
     @BeforeTest
     public void setupTest(){
         WebDriverManager.chromedriver().setup();

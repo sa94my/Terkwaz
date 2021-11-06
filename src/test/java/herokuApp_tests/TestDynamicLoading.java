@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class TestDynamicLoading extends HerokuTestBase{
     String expectedText = "Hello World!";
-    @Test
+    @Test(description = "get text of an element that takes sometime to load")
     public void testDynamicWaiting(){
         HomePage homePageObject = new HomePage();
         homePageObject.navigateToDynamicLoadingPage();

@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class TestFileUpload extends HerokuTestBase{
     private String filePath = System.getProperty("user.dir")+"\\src\\test\\resources\\";
     private String fileName = "Capture3.PNG";
-    @Test
+    @Test(description = "check file uploading functioality")
     public void testUpload(){
         HomePage homePageObject = new HomePage();
         homePageObject.navigateToFileUploadPage();
