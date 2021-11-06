@@ -6,6 +6,7 @@
             <class name="google_tests.TestGoogleSearch" />
             <class name="herokuApp_tests.TestFileUpload" />
             <class name="herokuApp_tests.TestDynamicLoading"></class>
+            <class name="catFacts_API.getOneRandomFact"></class>
         </classes>
     </test>
 
