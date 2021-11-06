@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-    <test thread-count="5" name="heroku">
+<suite name="Terkwaz ">
+    <test thread-count="5" name="GUI">
         <classes>
             <class name="google_tests.TestGoogleSearch" />
             <class name="herokuApp_tests.TestFileUpload" />
             <class name="herokuApp_tests.TestDynamicLoading"></class>
+        </classes>
+    </test>
+    <test thread-count="5" name="API">
+        <classes>
             <class name="catFacts_API.getOneRandomFact"></class>
         </classes>
     </test>
