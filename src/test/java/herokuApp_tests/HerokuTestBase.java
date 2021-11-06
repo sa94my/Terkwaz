@@ -5,8 +5,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+
+import java.io.IOException;
 
 public class HerokuTestBase {
     private WebDriver driver ;
@@ -27,4 +30,16 @@ public class HerokuTestBase {
     public void tearDown(){
     driver.quit();
     }
+
+    @AfterSuite
+    public void closureActivity(){
+        //open Allure report
+        try {
+            Runtime.getRuntime().exec("cmd /c allure serve target/allure-results");
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
 }
