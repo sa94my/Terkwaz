@@ -18,8 +18,8 @@ public class getOneRandomFact {
                 when().get("https://cat-fact.herokuapp.com/facts/random")
                 .then().
                 assertThat().body("text",Matchers.not(Matchers.emptyOrNullString())).extract().response();
-        Allure.addAttachment("Response Body", response.asString());
-        
+        Allure.addAttachment("Response Body", response.jsonPath().prettify());
+
 
     }
 }
