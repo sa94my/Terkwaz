@@ -5,9 +5,11 @@ import herokuappPages.Example2Page;
 import herokuappPages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.JsonData;
 
 public class TestDynamicLoading extends HerokuTestBase{
-    String expectedText = "Hello World!";
+    Object testData = JsonData.read("src/test/resources/TestData/HerokuTestData.json");
+    String expectedText = JsonData.getAttribute(testData,0,"DynamicLoading","expectedText");
     @Test(description = "get text of an element that takes sometime to load")
     public void testDynamicWaiting(){
         HomePage homePageObject = new HomePage();

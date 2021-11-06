@@ -4,11 +4,13 @@ import google.SearchPage;
 import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.JsonData;
 
 public class TestGoogleSearch extends TestBase{
-    String searchKeyword = "selenium webdriver";
-    int indexOfSearchResult=3 ;
-    String expectedText = "What is Selenium WebDriver?";
+    Object testData = JsonData.read("src/test/resources/TestData/googleTestData.json");
+    String searchKeyword = JsonData.getAttribute(testData,0,"searchResult","keyword");
+    int indexOfSearchResult=Integer.valueOf(JsonData.getAttribute(testData,0,"searchResult","resultIndex")) ;
+    String expectedText = JsonData.getAttribute(testData,0,"searchResult","expectedResult");
 
     @Test(description = "verify search results contain a specific String ")
     @Description("searching for web driver and checking the results")
