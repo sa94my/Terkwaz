@@ -8,6 +8,7 @@ import static google.PageBase.driver;
 public class SearchPage {
     private By searchBoxLocator = By.name("q");
     private String pageUrl="https://www.google.com/ncr";
+    // locator to search results excluding "people also search for" results
     //reconsider this locator
     private String searchResultsContainers = "(//div[@class='tF2Cxc'][.//div[contains(@class,'VwiC3b ')]])";
 
@@ -16,7 +17,11 @@ public class SearchPage {
         driver.get(pageUrl);
     }
 
-    // perform a search with given text
+    /*
+     perform a search with given text
+     @param
+     String searchKeyword : keyword to search for
+     */
     public void searchWithString(String searchKeyword){
         driver.findElement(searchBoxLocator).sendKeys(searchKeyword);
         driver.findElement(searchBoxLocator).sendKeys(Keys.ENTER);
@@ -26,7 +31,10 @@ public class SearchPage {
     public String getNthResultText(int resultIndex){
         return driver.findElement(getXpathForNthSearchResult(resultIndex)).getText();
     }
-
+    /*
+    for internal use
+    to allow for dynamic selection of search results
+     */
     private By getXpathForNthSearchResult(int resultIndex){
         /*
             TODO

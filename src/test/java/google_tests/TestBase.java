@@ -24,11 +24,14 @@ public class TestBase {
     public void setupTestMethod(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        // create a pagebase object
+        // and assign the current active webdriver instance to it
         PageBase PageBaseObject = new PageBase(driver);
     }
 
     @AfterMethod
     public void tearDown(ITestResult testResult){
+        // attach a screeenshot of the test to the allure execution report
         Allure.addAttachment(testResult.getName(), new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         driver.quit();
     }

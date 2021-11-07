@@ -19,13 +19,20 @@ public class FileUploadPage {
     WebDriverWait wait;
 
 
-
+/*
+Upload file
+@param
+String pathToFile : full qualified name of the file (filePath/filename.extension)
+ */
     public void FileUpload(String pathToFile){
         driver.findElement(uploadBtnLocator).sendKeys(pathToFile);
         driver.findElement(submitBtnLocator).click();
 
     }
-
+/*
+wait untill upload is complete
+then get the displayed uploaded file name
+ */
     public String getUploadedFileName(){
         wait = new WebDriverWait(driver, Duration.ofSeconds(7));
         wait.until(ExpectedConditions.textToBe(pageHeader,"File Uploaded!"));
