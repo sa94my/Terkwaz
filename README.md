@@ -10,9 +10,9 @@ You need to have the following installed in order to run this project
 
 # Usage
 To run this project 
-    - download the source code and import it into your IDE
-    - to run the complete suite of tests , run the TestNG.xml file 
-    - or you can run individual tests by running their recpective test class
+ - download the source code and import it into your IDE
+ - to run the complete suite of tests , run the TestNG.xml file 
+ - or you can run individual tests by running their recpective test class
 
 To modify test data edit the files under [src>test>resources]
 
